@@ -1,0 +1,293 @@
+{
+   "tienda": {
+      "nombre": "Mi Tienda Online",
+      "categorias": [
+         {
+            "id": 1,
+            "nombre": "Teléfonos y Tablets",
+            "productos": [
+               {
+                  "id": 101,
+                  "nombre": "Smartphone Pro",
+                  "precio": 1099.99,
+                  "descripcion": "El último smartphone del mercado.",
+                  "caracteristicas": "6.5 pulgadas, 48 MP, 4500 mAh",
+                  "imagenes": ["smartphone1.jpg", "smartphone2.jpg"],
+                  "inventario": 10
+               },
+               {
+                  "id": 102,
+                  "nombre": "Tablet Avanzada",
+                  "precio": 499.99,
+                  "descripcion": "Tablet ligera y versátil.",
+                  "caracteristicas": "10 pulgadas, 128 GB, 6000 mAh",
+                  "imagenes": ["tablet1.jpg", "tablet2.jpg"],
+                  "inventario": 8
+               },
+               {
+                  "id": 103,
+                  "nombre": "Smartwatch",
+                  "precio": 199.99,
+                  "descripcion": "Reloj inteligente con múltiples funciones.",
+                  "caracteristicas": "1.5 pulgadas, IP68, 350 mAh",
+                  "imagenes": ["smartwatch1.jpg", "smartwatch2.jpg"],
+                  "inventario": 15
+               }
+            ]
+         },
+         {
+            "id": 2,
+            "nombre": "Computadoras y Accesorios",
+            "productos": [
+               {
+                  "id": 201,
+                  "nombre": "Laptop Profesional",
+                  "precio": 1299.99,
+                  "descripcion": "Potente laptop para profesionales.",
+                  "caracteristicas": "15 pulgadas, Intel i7, 16 GB RAM",
+                  "imagenes": ["laptop1.jpg", "laptop2.jpg"],
+                  "inventario": 5
+               },
+               {
+                  "id": 202,
+                  "nombre": "Teclado Mecánico",
+                  "precio": 89.99,
+                  "descripcion": "Teclado mecánico con retroiluminación RGB.",
+                  "caracteristicas": "Cherry MX, RGB, USB",
+                  "imagenes": ["teclado1.jpg", "teclado2.jpg"],
+                  "inventario": 20
+               },
+               {
+                  "id": 203,
+                  "nombre": "Monitor 4K",
+                  "precio": 399.99,
+                  "descripcion": "Monitor 4K UHD para profesionales.",
+                  "caracteristicas": "27 pulgadas, 3840x2160, HDMI, DisplayPort",
+                  "imagenes": ["monitor1.jpg", "monitor2.jpg"],
+                  "inventario": 7
+               }
+            ]
+         },
+         {
+            "id": 3,
+            "nombre": "Audio y Video",
+            "productos": [
+               {
+                  "id": 301,
+                  "nombre": "Auriculares Inalámbricos",
+                  "precio": 149.99,
+                  "descripcion": "Auriculares con cancelación de ruido.",
+                  "caracteristicas": "20 horas, Bluetooth 5.0, 250 g",
+                  "imagenes": ["auriculares1.jpg", "auriculares2.jpg"],
+                  "inventario": 30
+               },
+               {
+                  "id": 302,
+                  "nombre": "Barra de Sonido",
+                  "precio": 299.99,
+                  "descripcion": "Barra de sonido con subwoofer inalámbrico.",
+                  "caracteristicas": "300 W, Bluetooth, HDMI ARC, Negro",
+                  "imagenes": ["barra1.jpg", "barra2.jpg"],
+                  "inventario": 12
+               },
+               {
+                  "id": 303,
+                  "nombre": "Cámara Digital",
+                  "precio": 599.99,
+                  "descripcion": "Cámara digital con lente intercambiable.",
+                  "caracteristicas": "24 MP, 4K, WiFi, Bluetooth",
+                  "imagenes": ["camara1.jpg", "camara2.jpg"],
+                  "inventario": 4
+               }
+            ]
+         }
+      ],
+      "usuarios": [
+         {
+            "id": 1,
+            "nombre": "Juan Pérez",
+            "email": "juanperez@gmail.com",
+            "direccion": "Calle Principal, 123, Madrid, España",
+            "historialCompras": [
+               {
+                  "productoId": 101,
+                  "cantidad": 2,
+                  "fecha": "2023-11-14"
+               },
+               {
+                  "productoId": 202,
+                  "cantidad": 1,
+                  "fecha": "2023-12-01"
+               }
+            ]
+         },
+         {
+            "id": 2,
+            "nombre": "Ana García",
+            "email": "anagarcia@gmail.com",
+            "direccion": "Avenida Siempre Viva, 456, Barcelona, España",
+            "historialCompras": [
+               {
+                  "productoId": 103,
+                  "cantidad": 1,
+                  "fecha": "2023-10-10"
+               },
+               {
+                  "productoId": 301,
+                  "cantidad": 1,
+                  "fecha": "2023-11-20"
+               }
+            ]
+         },
+         {
+            "id": 3,
+            "nombre": "Carlos López",
+            "email": "carloslopez@gmail.com",
+            "direccion": "Calle de la Luna, 789, Valencia, España",
+            "historialCompras": [
+               {
+                  "productoId": 102,
+                  "cantidad": 1,
+                  "fecha": "2023-09-15"
+               },
+               {
+                  "productoId": 201,
+                  "cantidad": 1,
+                  "fecha": "2023-11-22"
+               }
+            ]
+         },
+         {
+            "id": 4,
+            "nombre": "Laura Martínez",
+            "email": "lauramartinez@gmail.com",
+            "direccion": "Calle del Sol, 321, Sevilla, España",
+            "historialCompras": [
+               {
+                  "productoId": 101,
+                  "cantidad": 1,
+                  "fecha": "2023-11-10"
+               },
+               {
+                  "productoId": 302,
+                  "cantidad": 1,
+                  "fecha": "2023-11-15"
+               }
+            ]
+         },
+         {
+            "id": 5,
+            "nombre": "Fernando Ruiz",
+            "email": "fernandoruiz@gmail.com",
+            "direccion": "Calle de la Paz, 45, Bilbao, España",
+            "historialCompras": [
+               {
+                  "productoId": 202,
+                  "cantidad": 1,
+                  "fecha": "2023-10-05"
+               },
+               {
+                  "productoId": 203,
+                  "cantidad": 1,
+                  "fecha": "2023-10-20"
+               },
+               {
+                  "productoId": 301,
+                  "cantidad": 2,
+                  "fecha": "2023-11-01"
+               }
+            ]
+         },
+         {
+            "id": 6,
+            "nombre": "Sofía Torres",
+            "email": "sofiatorres@gmail.com",
+            "direccion": "Avenida de la Libertad, 78, Málaga, España",
+            "historialCompras": [
+               {
+                  "productoId": 103,
+                  "cantidad": 1,
+                  "fecha": "2023-11-12"
+               },
+               {
+                  "productoId": 202,
+                  "cantidad": 1,
+                  "fecha": "2023-11-18"
+               }
+            ]
+         },
+         {
+            "id": 7,
+            "nombre": "Javier Gómez",
+            "email": "javiergomez@gmail.com",
+            "direccion": "Calle de la Esperanza, 90, Granada, España",
+            "historialCompras": [
+               {
+                  "productoId": 201,
+                  "cantidad": 1,
+                  "fecha": "2023-10-25"
+               },
+               {
+                  "productoId": 301,
+                  "cantidad": 1,
+                  "fecha": "2023-11-05"
+               }
+            ]
+         },
+         {
+            "id": 8,
+            "nombre": "Isabel Martínez",
+            "email": "isabelmartinez@gmail.com",
+            "direccion": "Calle del Mar, 12, Alicante, España",
+            "historialCompras": [
+               {
+                  "productoId": 102,
+                  "cantidad": 1,
+                  "fecha": "2023-10-30"
+               },
+               {
+                  "productoId": 302,
+                  "cantidad": 1,
+                  "fecha": "2023-11-02"
+               }
+            ]
+         },
+         {
+            "id": 9,
+            "nombre": "Diego Fernández",
+            "email": "diegofernandez@gmail.com",
+            "direccion": "Calle Nueva, 34, Toledo, España",
+            "historialCompras": [
+               {
+                  "productoId": 301,
+                  "cantidad": 1,
+                  "fecha": "2023-11-10"
+               },
+               {
+                  "productoId": 203,
+                  "cantidad": 1,
+                  "fecha": "2023-11-15"
+               }
+            ]
+         },
+         {
+            "id": 10,
+            "nombre": "Patricia Jiménez",
+            "email": "patriciajimenez@gmail.com",
+            "direccion": "Calle del Futuro, 56, Córdoba, España",
+            "historialCompras": [
+               {
+                  "productoId": 102,
+                  "cantidad": 2,
+                  "fecha": "2023-11-01"
+               },
+               {
+                  "productoId": 301,
+                  "cantidad": 1,
+                  "fecha": "2023-11-20"
+               }
+            ]
+         }
+      ]
+   }
+}

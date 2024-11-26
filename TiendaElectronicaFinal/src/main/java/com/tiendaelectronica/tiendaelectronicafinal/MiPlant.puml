@@ -1,0 +1,140 @@
+@startuml
+
+class Categoria {
+    - int id
+    - String nombre
+    --
+    + Categoria(int id, String nombre)
+    + int getId()
+    + String getNombre()
+}
+
+class Producto {
+    - int id
+    - String nombre
+    - String descripcion
+    - double precio
+    - String caracteristicas
+    - int inventario
+    --
+    + Producto(int id, String nombre, String descripcion, double precio, String caracteristicas, int inventario)
+    + int getId()
+    + String getNombre()
+    + String getDescripcion()
+    + double getPrecio()
+    + String getCaracteristicas()
+    + int getInventario()
+}
+
+class Usuario {
+    - int id
+    - String nombre
+    - String email
+    - String direccion
+    --
+    + Usuario(int id, String nombre)
+    + Usuario(int id, String nombre, String email, String direccion)
+    + int getId()
+    + String getNombre()
+    + String getEmail()
+    + String getDireccion()
+    + String toString()
+}
+
+class ConexionBBDD {
+    - static final String DB_URL
+    - static final String DB_USERNAME
+    - static final String DB_PASSWORD
+    --
+    + static Connection getConnection()
+    + static void closeConnection(Connection connection)
+}
+
+class TiendaForm {
+    --
+    + TiendaForm()
+    + void Dimensiones()
+}
+
+class ProductosForm {
+    - List<Categoria> categorias
+    - List<Producto> productos
+    - Producto productoSeleccionado
+    - TiendaForm ventanaPrincipal
+    --
+    + ProductosForm(TiendaForm ventanaPrincipal)
+    + void cargarCategorias()
+    + void cargarProductosPorCategoria(int categoriaId)
+    + void configurarEventos()
+    + void cargarImagenesProducto()
+    + void Dimensiones()
+    + ImageIcon cargarImagenRedimensionada(String rutaImagen, JLabel label)
+}
+
+class ComprasForm {
+    - TiendaForm ventanaPrincipal
+    --
+    + ComprasForm(TiendaForm ventanaPrincipal)
+    + void Dimensiones()
+    + void configurarComponentes()
+    + void cargarUsuarios()
+    + void cargarCategorias()
+    + void cargarProductosPorCategoria(String categoriaNombre)
+    + void realizarCompra()
+}
+
+class HistorialForm {
+    - TiendaForm ventanaPrincipal
+    --
+    + HistorialForm(TiendaForm ventanaPrincipal)
+    + void Dimensiones()
+    + void inicializarModeloComboBox()
+    + void configurarComboBox()
+    + void cargarHistorialCompras(int usuarioId)
+}
+
+class LectorJSON {
+    - String jsonFilePath
+    --
+    + LectorJSON(String jsonFilePath)
+    + void cargarDatos()
+    + boolean datosYaCargados(Connection connection)
+    + void insertarTienda(Connection connection, JsonNode rootNode)
+    + void insertarCategorias(Connection connection, JsonNode rootNode)
+    + void insertarProductos(Connection connection, JsonNode rootNode)
+    + void insertarUsuarios(Connection connection, JsonNode rootNode)
+    + void insertarCompras(Connection connection, JsonNode rootNode)
+}
+
+class UsuariosForm {
+    - List<Usuario> usuarios
+    - TiendaForm ventanaPrincipal
+    --
+    + UsuariosForm(TiendaForm ventanaPrincipal)
+    + void Dimensiones()
+    + void cargarUsuarios()
+    + void configurarEventos()
+}
+
+class TiendaElectronicaFinal {
+    --
+    + static void main(String[] args)
+}
+
+ProductosForm --> Categoria : usa
+ProductosForm --> Producto : usa
+ProductosForm --> TiendaForm : referencia
+ProductosForm --> ConexionBBDD : usa
+ComprasForm --> TiendaForm : referencia
+ComprasForm --> ConexionBBDD : usa
+HistorialForm --> TiendaForm : referencia
+HistorialForm --> ConexionBBDD : usa
+UsuariosForm --> TiendaForm : referencia
+UsuariosForm --> ConexionBBDD : usa
+LectorJSON --> ConexionBBDD : usa
+LectorJSON --> Producto : usa
+LectorJSON --> Categoria : usa
+LectorJSON --> Usuario : usa
+TiendaElectronicaFinal --> TiendaForm : referencia
+
+@enduml
